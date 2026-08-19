@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To My Mentor, My Inspiration. Happy Birthday, Mrs. Femi!</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&family=Great+Vibes&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <style>
+      :root {
+        --bg-charcoal: #0a0b0c;
+        --warm-candle: #e6cfae;
+        --text-silver: #b3b3b3;
+        --text-bright: #f0f0f0;
+        --border-glow: rgba(230, 207, 174, 0.15);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        color: var(--text-silver);
+        background-color: var(--bg-charcoal);
+        overflow-x: hidden;
+        width: 100%;
+        line-height: 2;
+      }
+
+      /* Subtle moving background */
+      .ambient-bg {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background: radial-gradient(circle at 50% 0%, #181a1d 0%, #0a0b0c 80%);
+      }
+
+      .soft-light {
+        position: absolute;
+        width: 800px;
+        height: 800px;
+        background: radial-gradient(
+          circle,
+          rgba(230, 207, 174, 0.03) 0%,
+          transparent 60%
+        );
+        border-radius: 50%;
+        animation: drift 25s infinite alternate ease-in-out;
+      }
+
+      @keyframes drift {
+        0% {
+          transform: translate(-5%, -5%);
+        }
+        100% {
+          transform: translate(5%, 15%);
+        }
+      }
+
+      /* Theater Curtain Reveal */
+      #curtain-container {
+        position: fixed;
+        inset: 0;
+        z-index: 10000;
+        display: flex;
+        pointer-events: none;
+      }
+      .panel {
+        flex: 1;
+        background: #050505;
+        transition: transform 2s cubic-bezier(0.8, 0, 0.2, 1);
+        pointer-events: auto;
+        display: flex;
+        align-items: center;
+      }
+      .panel-left {
+        justify-content: flex-end;
+      }
+      .panel-right {
+        justify-content: flex-start;
+      }
+
+      .curtain-trigger {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10002;
+        text-align: center;
+        width: 100%;
+        transition: opacity 1.2s ease;
+        pointer-events: auto;
+        padding: 0 15px;
+      }
+      .curtain-trigger h2 {
+        font-family: "Great Vibes", cursive;
+        font-size: clamp(2.5rem, 10vw, 3.5rem);
+        color: var(--warm-candle);
+        margin-bottom: 30px;
+        font-weight: 400;
+        letter-spacing: 1px;
+      }
+
+      .open .panel-left {
+        transform: translateX(-100%);
+      }
+      .open .panel-right {
+        transform: translateX(100%);
+      }
+      .open .curtain-trigger {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .start-btn {
+        background: transparent;
+        border: 1px solid var(--warm-candle);
+        color: var(--warm-candle);
+        padding: 12px 30px;
+        border-radius: 2px;
+        cursor: pointer;
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        letter-spacing: 2px;
+        font-size: clamp(0.9rem, 4vw, 1.1rem);
+        transition: all 0.5s ease;
+        text-transform: lowercase;
+      }
+      .start-btn:hover {
+        background: var(--warm-candle);
+        color: var(--bg-charcoal);
+      }
+
+      .container {
+        max-width: 650px;
+        margin: 0 auto;
+        padding: 60px 25px 100px;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      #content {
+        display: block;
+      }
+
+      #explicit {
+        display: none;
+      }
+
+      @media screen and (min-width: 601px) {
+        #content {
+          display: none !important;
+        }
+
+        #explicit {
+          display: block !important;
+          padding: 50px;
+          text-align: center;
+          font-family: "Playfair Display", serif;
+          color: var(--warm-candle);
+        }
+      }
+
+      /* Editorial Header */
+      header {
+        text-align: left;
+        margin-bottom: 80px;
+        position: relative;
+      }
+
+      header::before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: 0;
+        width: 40px;
+        height: 1px;
+        background-color: var(--warm-candle);
+      }
+
+      .tagline {
+        font-family: "Poppins", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 0.7rem;
+        color: var(--warm-candle);
+        margin-bottom: 20px;
+        font-weight: 400;
+      }
+
+      h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2.2rem, 9vw, 3.5rem);
+        font-weight: 400;
+        color: var(--text-bright);
+        letter-spacing: 1px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        word-wrap: break-word;
+      }
+
+      #typed-output {
+        font-family: "Great Vibes", cursive;
+        font-size: clamp(1.6rem, 7vw, 2.2rem);
+        color: var(--warm-candle);
+      }
+
+      /* Swiper Gallery - Magazine Style */
+      .swiper {
+        padding-bottom: 60px;
+        margin-top: 30px;
+        width: 100%;
+      }
+      .swiper-slide {
+        width: 260px;
+        height: 360px;
+        border-radius: 2px;
+        overflow: hidden;
+        box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+      }
+      .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: contrast(1.1) brightness(0.9) grayscale(10%);
+      }
+
+      /* Elegant text blocks */
+      .glass-card {
+        background: transparent;
+        border: none;
+        border-top: 1px solid var(--border-glow);
+        border-radius: 0;
+        padding: 50px 0;
+        margin-bottom: 0;
+        backdrop-filter: none;
+      }
+
+      .message-body {
+        font-size: clamp(1rem, 4.5vw, 1.1rem);
+        color: var(--text-silver);
+        text-align: left;
+      }
+
+      .message-body p {
+        margin-bottom: 30px;
+        word-wrap: break-word;
+      }
+
+      .highlight {
+        color: var(--warm-candle);
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: clamp(1.2rem, 5.5vw, 1.4rem);
+        line-height: 1.6;
+        display: block;
+        margin-bottom: 30px;
+      }
+
+      p .highlight {
+        display: inline;
+        font-size: inherit;
+        margin-bottom: 0;
+      }
+
+      /* Editorial Stat Block */
+      .stats-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin: 40px 0;
+        border-left: 1px solid var(--warm-candle);
+        padding-left: 20px;
+      }
+      .stat-box {
+        background: transparent;
+        padding: 0;
+        text-align: left;
+      }
+      .stat-val {
+        display: block;
+        font-size: clamp(2.2rem, 9vw, 3rem);
+        line-height: 1;
+        color: var(--text-bright);
+        font-family: "Playfair Display", serif;
+        margin-bottom: 5px;
+      }
+      .stat-lbl {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--warm-candle);
+      }
+
+      /* Buttons & Interactive */
+      .music-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        left: auto;
+        background: transparent;
+        border: none;
+        color: var(--text-silver);
+        font-size: 0.8rem;
+        font-family: "Poppins", sans-serif;
+        letter-spacing: 1px;
+        cursor: pointer;
+        z-index: 1000;
+        display: none;
+        align-items: center;
+        opacity: 0.6;
+        transition: opacity 0.3s;
+      }
+      .music-toggle:hover {
+        opacity: 1;
+        color: var(--warm-candle);
+      }
+
+      .surprise-btn {
+        display: inline-block;
+        margin: 10px 0 20px;
+        background: transparent;
+        color: var(--warm-candle);
+        border: 1px solid var(--warm-candle);
+        padding: 12px 30px;
+        border-radius: 2px;
+        font-weight: 400;
+        cursor: pointer;
+        transition: 0.4s ease;
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        letter-spacing: 1px;
+        font-size: clamp(0.9rem, 4vw, 1rem);
+      }
+      .surprise-btn:hover {
+        background: var(--warm-candle);
+        color: var(--bg-charcoal);
+      }
+
+      /* Guestbook - Minimalist Form */
+      .guestbook h2 {
+        font-family: "Playfair Display", serif;
+        text-align: left;
+        font-size: clamp(1.6rem, 7vw, 2rem);
+        font-weight: 400;
+        color: var(--text-bright);
+        margin-bottom: 30px;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 15px 0;
+        margin-bottom: 30px;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid var(--border-glow);
+        border-radius: 0;
+        color: var(--text-bright);
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        resize: none;
+        transition: border-color 0.3s;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border-bottom: 1px solid var(--warm-candle);
+      }
+
+      textarea::placeholder {
+        color: #555;
+        font-style: italic;
+        font-family: "Playfair Display", serif;
+      }
+
+      .guestbook .start-btn {
+        width: auto;
+        padding: 12px 40px;
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <div class="ambient-bg"><div class="soft-light"></div></div>
+
+      <audio id="bgMusic" loop>
+        <source src="./a.mp3" type="audio/mpeg" />
+      </audio>
+
+      <div id="curtain-container">
+        <div class="panel panel-left"></div>
+        <div class="panel panel-right"></div>
+        <div class="curtain-trigger">
+          <h2>To My Dearest Mentor, My Inspiration.</h2>
+          <button class="start-btn" onclick="openCurtain()">Step Inside</button>
+        </div>
+      </div>
+
+      <button class="music-toggle" id="musicBtn" onclick="toggleMusic()">
+        Playing: Where Do I Begin
+      </button>
+
+      <div class="container">
+        <header class="fade-in">
+          <div class="tagline">Celebrating 50th Years of Grace</div>
+          <h1>FEMIKHIRANA WIDJAJA</h1>
+          <div
+            id="typed-output"
+            style="margin-top: 15px; color: var(--warm-candle)"></div>
+        </header>
+
+        <div class="fade-in">
+          <h2
+            style="
+              font-family: &quot;Playfair Display&quot;, serif;
+              text-align: left;
+              font-weight: 400;
+              font-size: clamp(1.8rem, 8vw, 2rem);
+              color: var(--text-bright);
+            ">
+            A Life in Bloom
+          </h2>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="https://scontent.fcgk9-2.fna.fbcdn.net/v/t39.30808-6/534681584_10162963155854831_7457443135091409757_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=53a332&_nc_eui2=AeG7BjX9r91jokvgdkVG572oAVXnJIN9ZRYBVeckg31lFor91YXtRY3aqA2vIuuSildSdwlO-HQLI6n3y962XjXf&_nc_ohc=kZMktAqA-k8Q7kNvwHYj4mR&_nc_oc=AdlHf4-XKICdY-WOR2WK5pbK7ges2q2_TKKepvdfdP6fQc6gDipzwDrTxfSP5FJOjYs&_nc_zt=23&_nc_ht=scontent.fcgk9-2.fna&_nc_gid=AIgBshOTY96A8Alp1DeJ2g&_nc_ss=8&oh=00_AfsKB8WukpVaQYZyjGLblg101Q6ch0D687kU6_h6bPVD7Q&oe=69A9FE52" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://scontent.fcgk9-1.fna.fbcdn.net/v/t39.30808-6/514494502_10162736786614831_8241805257994982154_n.jpg?stp=dst-jpg_s552x414_tt6&_nc_cat=105&ccb=1-7&_nc_sid=53a332&_nc_eui2=AeFhJptFbNheoJzuqhy8Gva4dF8BQPxuNRB0XwFA_G41ENhBTRZmLvhupTr-DoThObLuE8LspU764cyZ5G-HxYG3&_nc_ohc=D0jOcBEAzuoQ7kNvwFvPBpf&_nc_oc=AdnEAhEdeqYYhwZ19vTID5Z895Pl2IbAOWFw85S-WTGcIHWyIYqil-mTauGJSrX5tCE&_nc_zt=23&_nc_ht=scontent.fcgk9-1.fna&_nc_gid=7Q2ScVcYu08zSCAfqIcnDQ&_nc_ss=8&oh=00_AfuDzcQxKh-M0yENSQvjX2Oi-7Ic9gwg0Irwj-_YjIt_xA&oe=69A9E3EA" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://scontent.fcgk9-2.fna.fbcdn.net/v/t51.82787-15/610214073_18555525880031430_8164331829431955700_n.webp?stp=dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeEzsKIt8uTDVZ2s5IYlHWrIZAiE4fZsj5hkCITh9myPmKejyuee-RIc8g1DuV_dUByh_5j_XnpS19pAY20ZsjWV&_nc_ohc=AMgPX7WC_YAQ7kNvwF9TXo3&_nc_oc=AdkbItqAOHFCrFJQNqLD13D6ibe7mrPPXbtnxdqET-2nz_jpTZYBqOKTloXoit_KAVg&_nc_zt=23&_nc_ht=scontent.fcgk9-2.fna&_nc_gid=aGNd9nCf-xk_LmfkBGQ0Pw&_nc_ss=8&oh=00_AftwL4WkmjSUQk80V6m51qRgYQcpKmw8mkOnLsGU34g2EQ&oe=69A9F6B6" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://scontent.fcgk38-1.fna.fbcdn.net/v/t39.30808-6/592948208_10163410349844831_5013425890838178516_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFcds4FrDwRJmOD33h0GdWeHjeoVZPDLL4eN6hVk8MsvitCqsd5f0nx09wzSzYEOx59GmZ77ROedTD4KwWGCDQJ&_nc_ohc=hyIc2TQLtSsQ7kNvwEFv5Qe&_nc_oc=AdkjY8aWdOuMuPZUlDpe-NNEHPI65zDDIygYo2qrmYSj5x-Ml2cL30yybBmMpUocYfw&_nc_zt=23&_nc_ht=scontent.fcgk38-1.fna&_nc_gid=4xneG5zxnyiE1PxquY8sSA&_nc_ss=8&oh=00_AfsUx3vF1ETlCcqPwnBnYgBSTjZcSfSmCcbrdqyv483EZQ&oe=69A9F8BC" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card fade-in">
+          <div class="message-body">
+            <p class="highlight">
+              "A mentor is someone who sees more talent and ability within you,
+              than you see in yourself."
+            </p>
+            <p>
+              Happy 50th Birthday to the woman who raised my spirit and taught
+              me how to fly. You are my greatest inspiration.
+            </p>
+            <div class="stats-grid">
+              <div class="stat-box">
+                <span class="stat-val">50th</span>
+                <span class="stat-lbl">Years of Golden Jubilee</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-val">12.5th</span>
+                <span class="stat-lbl">Actual Birthdays</span>
+              </div>
+            </div>
+            <p></p>
+            <button class="surprise-btn fade-in" onclick="triggerConfetti()">
+              A Small Tribute
+            </button>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="glass-card fade-in">
+          <div class="message-body">
+            <p class="highlight">From my deepest part of heart,</p>
+            <p>
+              To the woman who is more than a teacher, you have been like a
+              second mother to me. You found me when I was "nothing" and, with
+              infinite patience and wisdom, you helped me grow into "something."
+            </p>
+            <p>
+              Being born on <span class="highlight">February 29th</span>, you
+              have always been rare. Just as a Leap Day is a gift to the world,
+              you have been a gift of time, guidance, and love to me and
+              everyone.
+            </p>
+            <p
+              style="
+                font-family: &quot;Great Vibes&quot;, cursive;
+                font-size: clamp(2rem, 8vw, 2.5rem);
+                color: var(--text-bright);
+                margin-top: 40px;
+              ">
+              - Aldi
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-card guestbook fade-in">
+          <h2>Say your personal wishes</h2>
+          <form id="wishForm">
+            <textarea
+              id="msg"
+              rows="2"
+              placeholder="Your heartfelt wish..."
+              required></textarea>
+            <button type="submit" class="start-btn">Write Down</button>
+          </form>
+        </div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+      <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+      <script>
+        function openCurtain() {
+          document.getElementById("curtain-container").classList.add("open");
+          document.getElementById("musicBtn").style.display = "flex";
+          toggleMusic();
+
+          new Typed("#typed-output", {
+            strings: [
+              "My Mentor.",
+              "My Inspiration.",
+              "The Rare Soul born on Feb 29.",
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true,
+          });
+        }
+
+        function toggleMusic() {
+          const audio = document.getElementById("bgMusic");
+          const btn = document.getElementById("musicBtn");
+          if (audio.paused) {
+            audio.play();
+            btn.innerHTML = "Playing: Where Do I Begin";
+          } else {
+            audio.pause();
+            btn.innerHTML = "Music Paused";
+          }
+        }
+
+        function triggerConfetti() {
+          const colors = ["#e6cfae", "#ffffff", "#888888"];
+          confetti({
+            particleCount: 150,
+            spread: 70,
+            origin: { y: 0.6 },
+            colors: colors,
+            disableForReducedMotion: true,
+          });
+        }
+
+        const swiper = new Swiper(".mySwiper", {
+          effect: "cards",
+          grabCursor: true,
+          autoplay: { delay: 3500 },
+        });
+
+        // --- UPDATED WHATSAPP SUBMISSION LOGIC ---
+        document.getElementById("wishForm").onsubmit = function (e) {
+          e.preventDefault();
+          const msg = document.getElementById("msg").value;
+
+          // Replace this placeholder with the actual WhatsApp number including the country code (e.g., 6281234567890)
+          const phoneNumber = "6281288788477";
+
+          // Encode the message so it formats correctly in the URL
+          const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(msg)}`;
+
+          // Open WhatsApp in a new tab
+          window.open(whatsappUrl, "_blank");
+
+          this.reset();
+          triggerConfetti();
+        };
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) e.target.classList.add("visible");
+            });
+          },
+          { threshold: 0.15 },
+        );
+        document
+          .querySelectorAll(".fade-in")
+          .forEach((el) => observer.observe(el));
+      </script>
+    </div>
+    <div id="explicit">Please open the page on mobile device..</div>
+  </body>
+</html>

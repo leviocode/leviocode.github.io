@@ -1,0 +1,137 @@
+body {
+  background: #000;
+}
+
+a {
+  color: #0df;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 601px) {
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    object-fit: cover;
+    object-position: right;
+  }
+
+  .fig {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+  }
+
+  .body {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+  }
+
+  .body a {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: 5rem auto;
+    text-align: center;
+  }
+
+  .body h1 {
+    font-family: "Pricedown", sans-serif;
+    font-size: 100pt;
+    z-index: 998;
+    text-shadow: 5px 5px #000;
+  }
+
+  .body h3 {
+    font-family: "Rage", sans-serif;
+    color: #f0f;
+    margin-bottom: -50px;
+    z-index: 999;
+    font-size: 35pt;
+  }
+
+  .body p {
+    text-align: right;
+    margin: 10px auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .fig {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+    z-index: 997;
+  }
+
+  .body {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+  }
+
+  .body a {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: 5rem auto;
+    text-align: center;
+  }
+
+  .body h1 {
+    font-family: "Pricedown", sans-serif;
+    font-size: 50pt;
+    z-index: 998;
+    text-shadow: 5px 5px #000;
+  }
+
+  .body h3 {
+    font-family: "Rage", sans-serif;
+    color: #f0f;
+    margin-bottom: -30px;
+    z-index: 999;
+    font-size: 25pt;
+  }
+
+  .body p {
+    text-align: right;
+    margin: 10px auto;
+  }
+}

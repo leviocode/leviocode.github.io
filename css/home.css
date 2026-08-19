@@ -1,0 +1,445 @@
+body {
+  background: #000;
+}
+
+a {
+  color: #0df;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 601px) {
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+  .snav {
+    display: none;
+  }
+
+  .figa {
+    display: none;
+  }
+
+  .fig {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+  }
+
+  .head {
+    position: fixed;
+  }
+
+  .head .left a {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 30pt;
+    margin: 1rem 1rem;
+    font-family: "Rage", sans-serif;
+    color: #f0f;
+    text-shadow: 5px 5px 5px #000;
+  }
+
+  .head .right .nav a {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #aaa;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    font-weight: bold;
+  }
+
+  .head .right .nav a:hover {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .head .right .menu {
+    font-size: 16pt;
+    display: none;
+  }
+
+  .head .right,
+  .head .left {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .head .left {
+    float: left;
+  }
+
+  .head .right {
+    float: right;
+  }
+
+  .body,
+  .foot {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    color: #fff;
+  }
+
+  .foot {
+    margin-top: 5rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+
+  .body .left,
+  .body .center,
+  .body .right {
+    width: 30%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .body .center {
+    width: 39%;
+  }
+
+  .body .left h1 {
+    font-size: 40pt;
+    padding-right: 1rem;
+    text-transform: uppercase;
+    border-right: 1px solid #fff;
+    line-height: normal;
+    font-family: "Pricedown", sans-serif;
+    text-shadow: 5px 5px 5px #000;
+  }
+
+  .body .right h1 {
+    font-size: 30pt;
+    padding-left: 1rem;
+    text-transform: uppercase;
+    border-left: 1px solid #fff;
+    line-height: normal;
+    font-family: "Pricedown", sans-serif;
+    text-shadow: 5px 5px 5px #000;
+  }
+
+  .body .left h3,
+  .body .right h3,
+  .body .left a,
+  .body .right a {
+    display: block;
+    margin: 5px auto;
+  }
+
+  .body .center img {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+    margin: auto;
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+  .body .left {
+    text-align: right;
+  }
+
+  .foot .left,
+  .foot .right {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .foot .left {
+    float: left;
+  }
+
+  .foot .right {
+    float: right;
+  }
+
+  .foot .left .links a {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+    color: #aaa;
+    margin: auto 5px;
+  }
+
+  .foot .left .links a i {
+    font-size: 16pt;
+  }
+
+  .foot .left .links a:hover i {
+    color: #fff;
+    font-weight: bold;
+    font-size: 16pt;
+  }
+
+  .foot .left .links {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: 1rem 1rem;
+  }
+
+  .foot .left p {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: auto 1rem;
+  }
+
+  .foot .right p {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: auto 1rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .fig {
+    display: none;
+  }
+
+  .figa {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+    z-index: 997;
+  }
+
+  .head {
+    margin-bottom: 2.5rem;
+  }
+
+  .head .left a {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 18pt;
+    color: #f0f;
+    margin: 1rem 1rem;
+    font-family: "Rage", sans-serif;
+    text-shadow: 5px 5px 5px #000;
+  }
+
+  .head .right .nav {
+    display: none;
+  }
+
+  .head .right .nav a:hover {
+    color: #000;
+  }
+
+  .head .right .menu {
+    font-size: 16pt;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    margin: 1rem 1rem;
+    text-shadow: 5px 5px #000;
+  }
+
+  .head .right,
+  .head .left {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .head .left {
+    float: left;
+  }
+
+  .head .right {
+    float: right;
+  }
+
+  .body,
+  .foot {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    color: #fff;
+  }
+
+  .foot {
+    margin-top: 5rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 10pt;
+  }
+
+  .body .left,
+  .body .right {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: 2rem 1rem;
+  }
+
+  .body .left h1 {
+    font-size: 30pt;
+    padding-left: 1rem;
+    text-transform: uppercase;
+    border-left: 1px solid #fff;
+    line-height: normal;
+    font-family: "Pricedown", sans-serif;
+    text-shadow: 3px 3px #000;
+  }
+
+  .body .right h1 {
+    font-size: 25pt;
+    padding-left: 1rem;
+    text-transform: uppercase;
+    border-left: 1px solid #fff;
+    line-height: normal;
+    font-family: "Pricedown", sans-serif;
+    text-shadow: 3px 3px #000;
+  }
+
+  .body .left h3,
+  .body .right h3,
+  .body .left a,
+  .body .right a {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    margin: 5px auto;
+    font-size: 10pt;
+  }
+
+  .body .left a,
+  .body .right a {
+    display: inline-block;
+  }
+
+  .body .center {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+
+  .body .center img {
+    width: 100%;
+    height: 90vh;
+    display: block;
+    overflow: hidden;
+    margin: auto;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .foot .left .links a {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+    color: #aaa;
+    margin: auto 5px;
+  }
+
+  .foot .left .links a i {
+    font-size: 16pt;
+  }
+
+  .foot .left .links a:hover i {
+    color: #fff;
+    font-weight: bold;
+    font-size: 16pt;
+  }
+
+  .foot .left .links {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: 1rem 1rem;
+  }
+
+  .foot .left p {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: auto 1rem;
+  }
+
+  .foot .right p {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: 1rem 1rem;
+  }
+}

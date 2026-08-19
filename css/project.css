@@ -1,0 +1,521 @@
+@media only screen and (min-width: 601px) {
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+  }
+
+  .snav {
+    display: none;
+  }
+
+  .fig,
+  .body,
+  .case {
+    width: auto;
+    display: block;
+    overflow: hidden;
+    height: auto;
+    clear: both;
+  }
+
+  .fig {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    white-space: nowrap;
+    align-content: center;
+    margin: 1.5rem auto;
+  }
+
+  .body {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .head .left a {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 30pt;
+    margin: 1rem 1rem;
+    font-family: "Rage", sans-serif;
+    color: #f0f;
+    text-shadow: 5px 5px 5px #000;
+  }
+
+  .head .right .nav a {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ddd;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    font-weight: bold;
+  }
+
+  .head .right .nav a:hover {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .head .right .menu {
+    font-size: 16pt;
+    display: none;
+  }
+
+  .head .right,
+  .head .left {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .head .left {
+    float: left;
+  }
+
+  .head .right {
+    float: right;
+  }
+
+  .body .side,
+  .body .sidex {
+    width: 40%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    padding: 1rem;
+    white-space: initial;
+    scroll-snap-align: start;
+  }
+
+  .body .sidex {
+    width: 66%;
+  }
+
+  .body #groc h1 {
+    margin: 1rem auto;
+  }
+
+  .body #groc p {
+    text-shadow: 5px 5px 5px #000;
+  }
+
+  .body #groc {
+    width: 33%;
+    text-align: right;
+    margin-right: 1rem;
+  }
+
+  .body .col {
+    height: auto;
+    display: block; /* Ensure it's a block element */
+    overflow: hidden; /* Contains floats if any inside */
+    background: rgba(0, 0, 0, 0.6); /* Consistent margin around each section */
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  .body .col img {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .body .col h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 16pt;
+  }
+
+  .body .col p {
+    margin: 1rem auto;
+  }
+
+  .container,
+  .com,
+  .cor {
+    width: 95%;
+    padding: 1rem;
+    margin: 1rem auto;
+    border: 1px solid #f0f;
+    border-radius: 20px;
+  }
+
+  .body .col .container {
+    max-height: 32rem;
+  }
+
+  .hint {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: #505;
+    color: #fff;
+    padding: 0 0 0 20px;
+  }
+
+  .hint img {
+    width: 35px;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1000;
+  }
+
+  .hint p {
+    margin-right: 8px;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .side img {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border-radius: 10px !important;
+  }
+
+  .side a {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    background: #505;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+    border-radius: 30px;
+    margin-top: 2rem;
+  }
+
+  .body .side h1 {
+    font-size: 20pt;
+  }
+
+  .body .side p {
+    margin: auto;
+  }
+
+  #groc {
+    vertical-align: middle;
+  }
+
+  #groc .bgc {
+    display: none;
+  }
+
+  #groc .container,
+  #groc .col {
+    border: initial;
+    background: initial;
+    backdrop-filter: initial;
+  }
+
+  #groc h1 {
+    font-family: "Pricedown", sans-serif;
+    font-size: 50pt;
+    text-shadow: 5px 5px #000;
+  }
+
+  #yt,
+  #contact {
+    display: none;
+  }
+
+  #jum {
+    margin-top: 3rem;
+  }
+
+  #jum i {
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bg {
+    display: none;
+  }
+
+  .fig,
+  .side {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    background: rgba(35, 0, 35);
+  }
+
+  .side {
+    margin: 1.5rem auto;
+  }
+
+  .head .left a {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 18pt;
+    color: #f0f;
+    margin: 1rem 1rem;
+    font-family: "Rage", sans-serif;
+    text-shadow: 5px 5px 5px #000;
+  }
+
+  .head .right .nav {
+    display: none;
+  }
+
+  .head .right .nav a:hover {
+    color: #000;
+  }
+
+  .head .right .menu {
+    font-size: 14pt;
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    margin: 1rem 1rem;
+  }
+
+  .head .right,
+  .head .left {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .head .left {
+    float: left;
+  }
+
+  .head .right {
+    float: right;
+  }
+
+  .body .col {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: auto;
+    font-size: 12pt;
+    background: rgba(35, 0, 35);
+  }
+
+  .body .col h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 20pt;
+  }
+
+  .body .col p {
+    margin-bottom: 1rem;
+  }
+
+  .container,
+  .com,
+  .cor {
+    width: 90%;
+    margin: 0.5rem auto;
+    padding: 1rem 0;
+    border: 1px hidden;
+    border-radius: 10px;
+  }
+
+  .head {
+    background: transparent;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .side .col .container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border-radius: 10px !important;
+  }
+
+  .side .col .container a {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    background: #505;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+    border-radius: 30px;
+    margin-top: 1.5rem;
+  }
+
+  .hint {
+    display: none;
+  }
+
+  #groc {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    position: relative;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  .case {
+    background: rgba(35, 0, 35);
+  }
+
+  #groc .container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+  #groc h1 {
+    font-family: "Pricedown", sans-serif;
+    font-size: 40pt;
+    margin: 10px auto;
+  }
+
+  #groc .bgc {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: block;
+    opacity: 0.4;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  #contact {
+    margin-top: 2rem;
+    background: #000;
+  }
+
+  #contact .col {
+    padding: 1rem 0 0 0;
+    border-top: 1px solid #111;
+    background: #000;
+  }
+
+  #contact .container {
+    margin: 1rem auto;
+  }
+
+  #contact .col .container a {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    color: #aaa;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 12pt;
+    margin: 5px auto;
+    margin-right: 10px;
+    background: transparent;
+    padding: 0;
+    text-align: left;
+  }
+
+  #contact a:hover {
+    color: #fff !important;
+  }
+
+  #contact a i {
+    margin-right: 5px;
+  }
+
+  #contact p {
+    margin-top: 3rem;
+  }
+
+  #stack .container .com,
+  #yt .container .com,
+  #contact .container .com {
+    overflow-y: scroll;
+    height: auto;
+    width: 100%;
+    border-radius: initial;
+    border: 1px hidden;
+    padding: initial;
+    display: block;
+  }
+
+  #yt .container .com {
+    overflow: hidden;
+  }
+
+  #yt .container .com iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    display: block;
+    overflow: hidden;
+  }
+
+  .side .col .container p {
+    margin: auto;
+  }
+
+  #contact {
+    margin: auto !important;
+  }
+
+  #jum {
+    display: none;
+  }
+}

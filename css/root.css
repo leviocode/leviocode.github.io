@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+@font-face {
+  font-family: "Pricedown";
+  src: url("/pricedown.otf");
+}
+
+@font-face {
+  font-family: "Rage";
+  src: url("/rage.ttf");
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+  border-radius: 30px;
+  border: 1px solid #222;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background: rgba(200, 200, 200, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0ff;
+}
+
+* {
+  margin: auto;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+body {
+  color: #fff;
+  background: #000;
+}
+
+p {
+  font-size: 11pt;
+}
+
+a {
+  color: #0ff;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 601px) {
+  .container {
+    width: 90%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: 1rem auto;
+  }
+
+  .snav {
+    display: none;
+  }
+
+  .head,
+  .body {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+
+  .head {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+  }
+
+  #bop {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 10pt;
+    color: #aaa;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: 1rem auto;
+  }
+
+  .head,
+  .body {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+
+  .head {
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+
+  .snav {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1001;
+  }
+
+  .snav .nav {
+    width: 60%;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+    overflow-y: scroll;
+    color: #000;
+    background: rgba(15, 0, 15);
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #222;
+  }
+
+  .snav .nav .header {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid #222;
+    background: #000;
+    position: sticky;
+    top: 0;
+  }
+
+  .snav .nav .header p {
+    font-family: "Rage", sans-serif;
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    color: #fff;
+    margin: 1rem 1rem;
+    font-weight: bold;
+    font-size: 16pt;
+    color: #f0f;
+  }
+
+  .snav .nav .links a,
+  .snav .nav .socmed a {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #222;
+    color: #fff;
+    font-size: 10pt;
+  }
+
+  .snav .nav .links p,
+  .snav .nav .socmed p {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: 1rem auto;
+    margin-top: 2rem;
+    padding: 0 1rem;
+    font-size: 10pt;
+    color: #aaa;
+  }
+
+  .snav .nav .socmed {
+    margin-bottom: 8rem;
+  }
+
+  .snav .nav .socmed a i {
+    margin-right: 10px;
+  }
+
+  .snav .nav .links a:hover,
+  .snav .nav .socmed a:hover {
+    font-weight: bold;
+    background: rgba(255, 0, 255, 0.2);
+    border-right: 6px solid #f0f;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  #bop {
+    display: none;
+  }
+}

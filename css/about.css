@@ -1,0 +1,1928 @@
+/* pc small */
+@media only screen and (min-width: 1024px) {
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+  }
+
+  .snav {
+    display: none;
+  }
+
+  .fig,
+  .body {
+    width: auto;
+    display: block;
+    overflow: hidden;
+    height: auto;
+    clear: both;
+  }
+
+  .fig {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    white-space: nowrap;
+    align-content: center;
+    margin: 1.5rem auto;
+  }
+
+  .body {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .head .left a {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 18pt;
+    margin: 1rem 1rem;
+    font-family: "Rage", sans-serif;
+    color: #f0f;
+    text-shadow: 5px 5px 5px #000;
+  }
+
+  .head .right .nav a {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ddd;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    font-weight: bold;
+  }
+
+  .head .right .nav a:hover {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .head .right .menu {
+    font-size: 16pt;
+    display: none;
+  }
+
+  .head .right,
+  .head .left {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .head .left {
+    float: left;
+  }
+
+  .head .right {
+    float: right;
+  }
+
+  .body .side,
+  .body .sidex {
+    width: 33%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    padding: 1rem;
+    white-space: initial;
+    scroll-snap-align: start;
+  }
+
+  .body .sidex {
+    width: 66%;
+  }
+
+  .body .col {
+    height: auto;
+    display: block; /* Ensure it's a block element */
+    overflow: hidden; /* Contains floats if any inside */
+    background: rgba(0, 0, 0, 0.6); /* Consistent margin around each section */
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  .body .col img {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .body .col h1 {
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 1rem;
+    font-size: 16pt;
+  }
+
+  .body .col p {
+    margin: 1rem auto;
+  }
+
+  .container,
+  .com,
+  .cor {
+    width: 95%;
+    padding: 1rem;
+    margin: 1rem auto;
+    border: 1px solid #f0f;
+    border-radius: 20px;
+  }
+
+  .body .col .container {
+    height: 26rem;
+  }
+
+  #career .container .cor h3 {
+    margin: auto;
+    padding: 0;
+  }
+
+  #career .container .cor {
+    width: 100%;
+    margin: auto;
+    border: 1px dashed #0ff;
+    border-radius: initial;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    padding: 1.5rem 1rem;
+  }
+
+  #career .container .cor p {
+    color: #0ff;
+    margin: 5px auto;
+    margin-left: -1rem;
+    font-size: 12pt;
+  }
+
+  #self .container {
+    position: relative;
+    padding: 0;
+  }
+
+  #self .pin {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    text-align: right;
+  }
+
+  #self .pin p {
+    font-family: "Pricedown", sans-serif;
+    margin: auto;
+    font-size: 30pt;
+    text-shadow: 5px 5px #000;
+    color: #fff;
+  }
+
+  #self .pin .name {
+    color: #f0f;
+    font-family: "Rage", sans-serif;
+    margin-bottom: -20px;
+    font-size: 30pt;
+  }
+
+  #assets a {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    color: #fff;
+    background: #303;
+    border: 1px solid #f0f;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-right: 10px;
+    font-size: 10pt;
+    font-weight: normal;
+  }
+
+  #stack .container .com p {
+    font-size: 10pt;
+  }
+
+  #stack span {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    margin: 5px;
+    color: #fff;
+    background: #303;
+    border: 1px solid #f0f;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 10pt;
+  }
+
+  #stack span i {
+    margin-right: 2px;
+  }
+
+  #contact a {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid #111;
+    color: #fff;
+    padding: 1rem 0;
+    text-decoration: none;
+    font-weight: normal;
+  }
+
+  #contact a:hover {
+    padding: 1rem;
+    background: #303;
+    border-right: 6px solid #f0f;
+  }
+
+  #contact a i {
+    margin-right: 10px;
+  }
+
+  #contact p {
+    color: #ddd;
+  }
+
+  #stack .container .com,
+  #yt .container .com,
+  #contact .container .com {
+    overflow-y: scroll;
+    height: 18rem;
+    width: 100%;
+    border-radius: initial;
+    border: 1px hidden;
+    padding: initial;
+    display: block;
+  }
+
+  #yt .container {
+    width: 95%;
+  }
+
+  #yt .container .com {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #yt .container .com iframe {
+    width: 100%;
+    height: 22rem;
+    border-radius: 10px;
+    display: block;
+    overflow: hidden;
+  }
+
+  .hint {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: #505;
+    color: #fff;
+    padding: 0 0 0 20px;
+  }
+
+  .hint img {
+    width: 25px;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1000;
+  }
+
+  .hint p {
+    margin-right: 8px;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    font-size: 8pt;
+  }
+
+  #company p {
+    margin-bottom: 2rem;
+  }
+
+  #company .clon img {
+    width: 60px;
+    height: 60px;
+    display: block;
+    overflow: hidden;
+    float: left;
+    margin-right: 1rem;
+    border-radius: 50%;
+    border: 1px solid #0ff;
+    padding: 5px;
+  }
+
+  #company .clon p,
+  #company .clon span {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: auto;
+    color: #ddd;
+    font-size: 9pt;
+  }
+
+  #company .clon {
+    margin: 1.7rem auto;
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+
+  body #groc h1 {
+    margin: 1rem auto;
+  }
+
+  .body #groc p {
+    text-shadow: 5px 5px 5px #000;
+  }
+
+  .body #groc {
+    width: 33%;
+    text-align: right;
+  }
+
+  #groc {
+    padding-top: 2rem;
+    vertical-align: middle;
+  }
+
+  #groc .bgc {
+    display: none;
+  }
+
+  #groc .container,
+  #groc .col {
+    border: initial;
+    background: initial;
+    backdrop-filter: initial;
+  }
+
+  #groc h1 {
+    font-family: "Pricedown", sans-serif;
+    font-size: 60pt;
+    text-shadow: 5px 5px #000;
+  }
+
+  #jum {
+    margin-top: 3rem;
+  }
+
+  #jum i {
+    margin-left: 10px;
+  }
+}
+
+/* pc medium */
+@media only screen and (min-width: 1366px) {
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+  }
+
+  .snav {
+    display: none;
+  }
+
+  .fig,
+  .body {
+    width: auto;
+    display: block;
+    overflow: hidden;
+    height: auto;
+    clear: both;
+  }
+
+  .fig {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    white-space: nowrap;
+    align-content: center;
+    margin: 1.5rem auto;
+  }
+
+  .body {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .head .left a {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 18pt;
+    margin: 1rem 1rem;
+    font-family: "Rage", sans-serif;
+    color: #f0f;
+    text-shadow: 5px 5px 5px #000;
+  }
+
+  .head .right .nav a {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ddd;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    font-weight: bold;
+  }
+
+  .head .right .nav a:hover {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .head .right .menu {
+    font-size: 16pt;
+    display: none;
+  }
+
+  .head .right,
+  .head .left {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .head .left {
+    float: left;
+  }
+
+  .head .right {
+    float: right;
+  }
+
+  .body .side,
+  .body .sidex {
+    width: 33%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    padding: 1rem;
+    white-space: initial;
+    scroll-snap-align: start;
+  }
+
+  .body .sidex {
+    width: 66%;
+  }
+
+  .body .col {
+    height: auto;
+    display: block; /* Ensure it's a block element */
+    overflow: hidden; /* Contains floats if any inside */
+    background: rgba(0, 0, 0, 0.6); /* Consistent margin around each section */
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  .body .col img {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .body .col h1 {
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 1rem;
+    font-size: 16pt;
+  }
+
+  .body .col p {
+    margin: 1rem auto;
+  }
+
+  .container,
+  .com,
+  .cor {
+    width: 95%;
+    padding: 1rem;
+    margin: 1rem auto;
+    border: 1px solid #f0f;
+    border-radius: 20px;
+  }
+
+  .body .col .container {
+    height: 30rem;
+  }
+
+  #career .container .cor h3 {
+    margin: auto;
+    padding: 0;
+  }
+
+  #career .container .cor {
+    width: 100%;
+    margin: auto;
+    border: 1px dashed #0ff;
+    border-radius: initial;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    padding: 1.5rem 1rem;
+  }
+
+  #career .container .cor p {
+    color: #0ff;
+    margin: 5px auto;
+    margin-left: -1rem;
+    font-size: 12pt;
+  }
+
+  #self .container {
+    position: relative;
+    padding: 0;
+  }
+
+  #self .pin {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    text-align: right;
+  }
+
+  #self .pin p {
+    font-family: "Pricedown", sans-serif;
+    margin: auto;
+    font-size: 30pt;
+    text-shadow: 5px 5px #000;
+    color: #fff;
+  }
+
+  #self .pin .name {
+    color: #f0f;
+    font-family: "Rage", sans-serif;
+    margin-bottom: -20px;
+    font-size: 30pt;
+  }
+
+  #assets a {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    color: #fff;
+    background: #303;
+    border: 1px solid #f0f;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-right: 10px;
+    font-size: 10pt;
+    font-weight: normal;
+  }
+
+  #stack .container .com p {
+    font-size: 10pt;
+  }
+
+  #stack span {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    margin: 5px;
+    color: #fff;
+    background: #303;
+    border: 1px solid #f0f;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 10pt;
+  }
+
+  #stack span i {
+    margin-right: 2px;
+  }
+
+  #contact a {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid #111;
+    color: #fff;
+    padding: 1rem 0;
+    text-decoration: none;
+    font-weight: normal;
+  }
+
+  #contact a:hover {
+    padding: 1rem;
+    background: #303;
+    border-right: 6px solid #f0f;
+  }
+
+  #contact a i {
+    margin-right: 10px;
+  }
+
+  #contact p {
+    color: #ddd;
+  }
+
+  #stack .container .com,
+  #yt .container .com,
+  #contact .container .com {
+    overflow-y: scroll;
+    height: 22rem;
+    width: 100%;
+    border-radius: initial;
+    border: 1px hidden;
+    padding: initial;
+    display: block;
+  }
+
+  #yt .container {
+    width: 95%;
+  }
+
+  #yt .container .com {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #yt .container .com iframe {
+    width: 100%;
+    height: 22rem;
+    border-radius: 10px;
+    display: block;
+    overflow: hidden;
+  }
+
+  .hint {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: #505;
+    color: #fff;
+    padding: 0 0 0 20px;
+  }
+
+  .hint img {
+    width: 25px;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1000;
+  }
+
+  .hint p {
+    margin-right: 8px;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    font-size: 8pt;
+  }
+
+  #company p {
+    margin-bottom: 2rem;
+  }
+
+  #company .clon img {
+    width: 60px;
+    height: 60px;
+    display: block;
+    overflow: hidden;
+    float: left;
+    margin-right: 1rem;
+    border-radius: 50%;
+    border: 1px solid #0ff;
+    padding: 5px;
+  }
+
+  #company .clon p,
+  #company .clon span {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: auto;
+    color: #ddd;
+    font-size: 9pt;
+  }
+
+  #company .clon {
+    margin: 1.7rem auto;
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+
+  body #groc h1 {
+    margin: 1rem auto;
+  }
+
+  .body #groc p {
+    text-shadow: 5px 5px 5px #000;
+  }
+
+  .body #groc {
+    width: 33%;
+    text-align: right;
+  }
+
+  #groc {
+    padding-top: 2rem;
+    vertical-align: middle;
+  }
+
+  #groc .bgc {
+    display: none;
+  }
+
+  #groc .container,
+  #groc .col {
+    border: initial;
+    background: initial;
+    backdrop-filter: initial;
+  }
+
+  #groc h1 {
+    font-family: "Pricedown", sans-serif;
+    font-size: 60pt;
+    text-shadow: 5px 5px #000;
+  }
+
+  #jum {
+    margin-top: 3rem;
+  }
+
+  #jum i {
+    margin-left: 10px;
+  }
+}
+
+/* pc large */
+@media only screen and (min-width: 1920px) {
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+  }
+
+  .snav {
+    display: none;
+  }
+
+  .fig,
+  .body {
+    width: auto;
+    display: block;
+    overflow: hidden;
+    height: auto;
+    clear: both;
+  }
+
+  .fig {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    white-space: nowrap;
+    align-content: center;
+    margin: 1.5rem auto;
+  }
+
+  .body {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .head .left a {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 30pt;
+    margin: 1rem 1rem;
+    font-family: "Rage", sans-serif;
+    color: #f0f;
+    text-shadow: 5px 5px 5px #000;
+  }
+
+  .head .right .nav a {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ddd;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    font-weight: bold;
+  }
+
+  .head .right .nav a:hover {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .head .right .menu {
+    font-size: 16pt;
+    display: none;
+  }
+
+  .head .right,
+  .head .left {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .head .left {
+    float: left;
+  }
+
+  .head .right {
+    float: right;
+  }
+
+  .body .side,
+  .body .sidex {
+    width: 33%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    padding: 1rem;
+    white-space: initial;
+    scroll-snap-align: start;
+  }
+
+  .body .sidex {
+    width: 66%;
+  }
+
+  .body .col {
+    height: auto;
+    display: block; /* Ensure it's a block element */
+    overflow: hidden; /* Contains floats if any inside */
+    background: rgba(0, 0, 0, 0.6); /* Consistent margin around each section */
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  .body .col img {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .body .col h1 {
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 1rem;
+    font-size: 22pt;
+  }
+
+  .body .col p {
+    margin: 1rem auto;
+    font-size: 14pt;
+  }
+
+  .container,
+  .com,
+  .cor {
+    width: 95%;
+    padding: 1rem 2rem;
+    margin: 1rem auto;
+    border: 1px solid #f0f;
+    border-radius: 20px;
+  }
+
+  .body .col .container {
+    height: 40rem;
+  }
+
+  #career .container .cor h3 {
+    margin: auto;
+    padding: 0;
+  }
+
+  #career .container .cor {
+    width: 100%;
+    margin: auto;
+    border: 1px dashed #0ff;
+    border-radius: initial;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    padding: 1.5rem 1rem;
+  }
+
+  #career .container .cor p {
+    color: #0ff;
+    margin: 5px auto;
+    margin-left: -1rem;
+    font-size: 12pt;
+  }
+
+  #self .container {
+    position: relative;
+    padding: 0;
+  }
+
+  #self .pin {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    text-align: right;
+  }
+
+  #self .pin p {
+    font-family: "Pricedown", sans-serif;
+    margin: auto;
+    font-size: 30pt;
+    text-shadow: 5px 5px #000;
+    color: #fff;
+  }
+
+  #self .pin .name {
+    color: #f0f;
+    font-family: "Rage", sans-serif;
+    margin-bottom: -20px;
+    font-size: 30pt;
+  }
+
+  #assets a {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    color: #fff;
+    background: #303;
+    border: 1px solid #f0f;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-right: 10px;
+    font-size: 10pt;
+    font-weight: normal;
+  }
+
+  #stack .container .com p {
+    font-size: 10pt;
+  }
+
+  #stack span {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    margin: 5px;
+    color: #fff;
+    background: #303;
+    border: 1px solid #f0f;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 10pt;
+  }
+
+  #stack span i {
+    margin-right: 2px;
+  }
+
+  #contact a {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid #111;
+    color: #fff;
+    padding: 1rem 0;
+    text-decoration: none;
+    font-weight: normal;
+  }
+
+  #contact a:hover {
+    padding: 1rem;
+    background: #303;
+    border-right: 6px solid #f0f;
+  }
+
+  #contact a i {
+    margin-right: 10px;
+  }
+
+  #contact p {
+    color: #ddd;
+  }
+
+  #stack .container .com,
+  #yt .container .com,
+  #contact .container .com {
+    overflow-y: scroll;
+    height: 31rem;
+    width: 100%;
+    border-radius: initial;
+    border: 1px hidden;
+    padding: initial;
+    display: block;
+  }
+
+  #yt .container {
+    width: 95%;
+  }
+
+  #yt .container .com {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #yt .container .com iframe {
+    width: 100%;
+    height: 31rem;
+    border-radius: 10px;
+    display: block;
+    overflow: hidden;
+  }
+
+  .hint {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: #505;
+    color: #fff;
+    padding: 0 0 0 20px;
+  }
+
+  .hint img {
+    width: 25px;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1000;
+  }
+
+  .hint p {
+    margin-right: 8px;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    font-size: 8pt;
+  }
+
+  #company p {
+    margin-bottom: 2rem;
+  }
+
+  #company .clon img {
+    width: 60px;
+    height: 60px;
+    display: block;
+    overflow: hidden;
+    float: left;
+    margin-right: 1rem;
+    border-radius: 50%;
+    border: 1px solid #0ff;
+    padding: 5px;
+  }
+
+  #company .clon p,
+  #company .clon span {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: auto;
+    color: #ddd;
+    font-size: 9pt;
+  }
+
+  #company .clon {
+    margin: 1.7rem auto;
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+
+  body #groc h1 {
+    margin: 1rem auto;
+    font-size: 70pt;
+  }
+
+  .body #groc p {
+    text-shadow: 5px 5px 5px #000;
+    font-size: 14pt;
+  }
+
+  .body #groc {
+    width: 33%;
+    text-align: right;
+  }
+
+  #groc {
+    padding-top: 2rem;
+    vertical-align: middle;
+  }
+
+  #groc .bgc {
+    display: none;
+  }
+
+  #groc .container,
+  #groc .col {
+    border: initial;
+    background: initial;
+    backdrop-filter: initial;
+  }
+
+  #groc h1 {
+    font-family: "Pricedown", sans-serif;
+    font-size: 60pt;
+    text-shadow: 5px 5px #000;
+  }
+
+  #jum {
+    margin-top: 3rem;
+  }
+
+  #jum i {
+    margin-left: 10px;
+  }
+
+  #abt {
+    font-size: 35pt;
+  }
+}
+
+/* tablet */
+@media only screen and (max-width: 850px) {
+  .bg {
+    display: none;
+  }
+
+  .fig {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    background: rgba(35, 0, 35);
+  }
+
+  .head .left a {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 18pt;
+    color: #f0f;
+    margin: 1rem 1rem;
+    font-family: "Rage", sans-serif;
+    text-shadow: 5px 5px 5px #000;
+  }
+
+  .head .right .nav {
+    display: none;
+  }
+
+  .head .right .nav a:hover {
+    color: #000;
+  }
+
+  .head .right .menu {
+    font-size: 14pt;
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    margin: 1rem 1rem;
+  }
+
+  .head .right,
+  .head .left {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .head .left {
+    float: left;
+  }
+
+  .head .right {
+    float: right;
+  }
+
+  .body .col {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: auto;
+    font-size: 12pt;
+    background: rgba(35, 0, 35);
+  }
+
+  .body .col h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 20pt;
+  }
+
+  .body .col p {
+    margin-bottom: 1rem;
+  }
+
+  .container,
+  .com,
+  .cor {
+    width: 90%;
+    margin: 0.5rem auto;
+    padding: 1rem 0;
+    border: 1px hidden;
+    border-radius: 10px;
+  }
+
+  #stack .container .com p {
+    margin: 1.5rem auto 10px auto;
+  }
+
+  #career .container .cor {
+    width: 100%;
+    margin: auto;
+    border: 2.5px dashed #0ff;
+    border-radius: initial;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    padding: 1rem 1rem;
+    font-weight: bold;
+  }
+
+  #career .container .cor p {
+    color: #0ff;
+    margin-left: -1rem;
+  }
+
+  #self {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    
+  }
+
+  #self .container,
+  #self .container .com {
+    position: relative;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: auto;
+    border: 1px hidden;
+    border-radius: initial;
+    background: #000 !important;
+  }
+
+  #self img {
+    width: 60%;
+    height: 400px;
+    display: block;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  #self .pin {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    position: absolute;
+    bottom: 4rem;
+    left: 1rem;
+    text-align: left;
+  }
+
+  #self .pin p {
+    font-family: "Pricedown", sans-serif;
+    margin: 5px auto;
+    font-size: 30pt;
+    text-shadow: 5px 5px 5px #000;
+    color: #fff;
+  }
+
+  #self .pin .name {
+    color: #f0f;
+    font-family: "Rage", sans-serif;
+    margin-bottom: -10px;
+    font-size: 25pt;
+  }
+
+  #assets a {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    color: #fff;
+    background: #303;
+    border: 1px solid #f0f;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-right: 10px;
+    font-size: 10pt;
+  }
+
+  #stack .container p {
+    font-size: 10pt;
+  }
+
+  #stack span {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    margin: 5px 5px auto auto;
+    color: #fff;
+    background: #303;
+    border: 1px solid #f0f;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 10pt;
+  }
+
+  #stack span i {
+    margin-right: 5px;
+  }
+
+  #contact {
+    margin-top: 2rem;
+    background: #000;
+  }
+
+  #contact .col {
+    padding: 1rem 0 0 0;
+    border-top: 1px solid #111;
+    background: #000;
+  }
+
+  #contact a {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    color: #aaa;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 12pt;
+    margin: 5px auto;
+  }
+
+  #contact a:hover {
+    color: #fff;
+  }
+
+  #contact a i {
+    margin-right: 5px;
+  }
+
+  #contact p {
+    margin-top: 3rem;
+  }
+
+  #stack .container .com,
+  #yt .container .com,
+  #contact .container .com {
+    overflow-y: scroll;
+    height: auto;
+    width: 100%;
+    border-radius: initial;
+    border: 1px hidden;
+    padding: initial;
+    display: block;
+  }
+
+  #yt .container .com {
+    overflow: hidden;
+  }
+
+  #yt .container .com iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    display: block;
+    overflow: hidden;
+  }
+
+  .head {
+    background: #000;
+    padding: 0;
+  }
+
+  .hint {
+    display: none;
+  }
+
+  #company p {
+    margin-bottom: 2rem;
+  }
+
+  #company .clon img {
+    width: 60px;
+    height: 60px;
+    display: block;
+    overflow: hidden;
+    float: left;
+    margin-right: 1rem;
+    border-radius: 50%;
+    padding: 3px;
+    border: 1px solid #0ff;
+  }
+
+  #company .clon p,
+  #company .clon span {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: auto;
+    color: #ddd;
+    font-size: 9pt;
+  }
+
+  #company .clon {
+    margin: 2em auto;
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+
+  #leg {
+    width: 100% !important;
+    min-height: 500px !important;
+  }
+
+  #groc {
+    display: none;
+  }
+
+  #bop {
+    display: none;
+  }
+}
+
+/* smartphone */
+@media only screen and (max-width: 450px) {
+  .bg {
+    display: none;
+  }
+
+  .fig {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    background: rgba(35, 0, 35);
+  }
+
+  .head .left a {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 18pt;
+    color: #f0f;
+    margin: 1rem 1rem;
+    font-family: "Rage", sans-serif;
+    text-shadow: 5px 5px 5px #000;
+  }
+
+  .head .right .nav {
+    display: none;
+  }
+
+  .head .right .nav a:hover {
+    color: #000;
+  }
+
+  .head .right .menu {
+    font-size: 14pt;
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    margin: 1rem 1rem;
+  }
+
+  .head .right,
+  .head .left {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .head .left {
+    float: left;
+  }
+
+  .head .right {
+    float: right;
+  }
+
+  .body .col {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: auto;
+    font-size: 12pt;
+    background: rgba(35, 0, 35);
+  }
+
+  .body .col h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 20pt;
+  }
+
+  .body .col p {
+    margin-bottom: 1rem;
+  }
+
+  .container,
+  .com,
+  .cor {
+    width: 90%;
+    margin: 0.5rem auto;
+    padding: 1rem 0;
+    border: 1px hidden;
+    border-radius: 10px;
+  }
+
+  #stack .container .com p {
+    margin: 1.5rem auto 10px auto;
+  }
+
+  #career .container .cor {
+    width: 100%;
+    margin: auto;
+    border: 2.5px dashed #0ff;
+    border-radius: initial;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    padding: 1rem 1rem;
+    font-weight: bold;
+  }
+
+  #career .container .cor p {
+    color: #0ff;
+    margin-left: -1rem;
+  }
+
+  #self {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  #self .container,
+  #self .container .com {
+    position: relative;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: auto;
+    border: 1px hidden;
+    border-radius: initial;
+  }
+
+  #self img {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  #self .pin {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    position: absolute;
+    bottom: 4rem;
+    left: 1rem;
+    text-align: left;
+  }
+
+  #self .pin p {
+    font-family: "Pricedown", sans-serif;
+    margin: 5px auto;
+    font-size: 30pt;
+    text-shadow: 5px 5px 5px #000;
+    color: #fff;
+  }
+
+  #self .pin .name {
+    color: #f0f;
+    font-family: "Rage", sans-serif;
+    margin-bottom: -10px;
+    font-size: 25pt;
+  }
+
+  #assets a {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    color: #fff;
+    background: #303;
+    border: 1px solid #f0f;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-right: 10px;
+    font-size: 10pt;
+  }
+
+  #stack .container p {
+    font-size: 10pt;
+  }
+
+  #stack span {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    margin: 5px 5px auto auto;
+    color: #fff;
+    background: #303;
+    border: 1px solid #f0f;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 10pt;
+  }
+
+  #stack span i {
+    margin-right: 5px;
+  }
+
+  #contact {
+    margin-top: 2rem;
+    background: #000;
+  }
+
+  #contact .col {
+    padding: 1rem 0 0 0;
+    border-top: 1px solid #111;
+    background: #000;
+  }
+
+  #contact a {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    color: #aaa;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 12pt;
+    margin: 5px auto;
+  }
+
+  #contact a:hover {
+    color: #fff;
+  }
+
+  #contact a i {
+    margin-right: 5px;
+  }
+
+  #contact p {
+    margin-top: 3rem;
+  }
+
+  #stack .container .com,
+  #yt .container .com,
+  #contact .container .com {
+    overflow-y: scroll;
+    height: auto;
+    width: 100%;
+    border-radius: initial;
+    border: 1px hidden;
+    padding: initial;
+    display: block;
+  }
+
+  #yt .container .com {
+    overflow: hidden;
+  }
+
+  #yt .container .com iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    display: block;
+    overflow: hidden;
+  }
+
+  .head {
+    background: #000;
+    padding: 0;
+  }
+
+  .hint {
+    display: none;
+  }
+
+  #company p {
+    margin-bottom: 2rem;
+  }
+
+  #company .clon img {
+    width: 60px;
+    height: 60px;
+    display: block;
+    overflow: hidden;
+    float: left;
+    margin-right: 1rem;
+    border-radius: 50%;
+    padding: 3px;
+    border: 1px solid #0ff;
+  }
+
+  #company .clon p,
+  #company .clon span {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: auto;
+    color: #ddd;
+    font-size: 9pt;
+  }
+
+  #company .clon {
+    margin: 2em auto;
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+
+  #leg {
+    width: 100% !important;
+    min-height: 500px !important;
+  }
+
+  #groc {
+    display: none;
+  }
+
+  #bop {
+    display: none;
+  }
+}
+
+#assets {
+  margin-top: 3rem;
+}
+
+#assets a {
+  background: #505;
+  margin-right: 6px;
+}

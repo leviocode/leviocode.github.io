@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Luxury Celebration</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet" />
+    <style>
+      /* --- BRIGHT LUXURY COLOR PALETTE --- */
+      :root {
+        --bg-main: #fdfbf7; /* Soft ivory */
+        --bg-gradient: linear-gradient(135deg, #fdfbf7 0%, #f4eee6 100%);
+        --text-dark: #3a3836;
+        --text-gold: #b89047;
+        --gold-gradient: linear-gradient(to right, #c5a059, #e6ce98, #b89047);
+        --accent-blush: #e2b4bd;
+        --card-bg: rgba(255, 255, 255, 0.85);
+        --glass-border: rgba(197, 160, 89, 0.25);
+        --shadow-soft: 0 15px 35px rgba(184, 144, 71, 0.1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        background: var(--bg-gradient);
+        background-attachment: fixed;
+        color: var(--text-dark);
+        overflow-x: hidden;
+        line-height: 1.8;
+      }
+
+      /* --- BRIGHT ELEGANT INTRO SCREEN --- */
+      #curtain {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fdfbf7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        transition:
+          opacity 1.5s ease,
+          visibility 1.5s ease;
+      }
+
+      .gold-btn {
+        background: var(--bg-main);
+        color: var(--text-gold);
+        border: 1px solid var(--text-gold);
+        padding: 15px 40px;
+        font-size: 1.2rem;
+        font-family: "Cinzel", serif;
+        letter-spacing: 2px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: 0.4s;
+        text-transform: uppercase;
+        border-radius: 3px;
+      }
+
+      .gold-btn:hover {
+        background: var(--gold-gradient);
+        color: #fff;
+        box-shadow: 0 10px 20px rgba(184, 144, 71, 0.3);
+        border-color: transparent;
+      }
+
+      /* --- SCROLL ANIMATIONS --- */
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(40px);
+        transition:
+          opacity 1.2s cubic-bezier(0.5, 0, 0, 1),
+          transform 1.2s cubic-bezier(0.5, 0, 0, 1);
+        will-change: opacity, visibility;
+      }
+      .fade-in-section.is-visible {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* --- HERO SECTION WITH BACKGROUND --- */
+      header {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 20px;
+        /* Cheerful, luxury background image */
+        background: url("https://images.unsplash.com/photo-1505909182942-e2f09aee3e89?auto=format&fit=crop&w=1920&q=80")
+          center/cover no-repeat;
+      }
+
+      /* Soft white overlay so the text is perfectly readable */
+      header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(3px);
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.85);
+        padding: 60px 80px;
+        border-radius: 10px;
+        border: 1px solid var(--glass-border);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        max-width: 800px;
+        width: 100%;
+      }
+
+      .subtitle-script {
+        font-family: "Great Vibes", cursive;
+        font-size: 4rem;
+        color: var(--accent-blush);
+        margin-bottom: -15px;
+        z-index: 2;
+      }
+
+      h1 {
+        font-family: "Cinzel", serif;
+        font-size: 5vw;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        background: var(--gold-gradient);
+        -webkit-background-clip: text;
+        color: transparent;
+        margin: 20px 0;
+      }
+
+      .blessing-mark {
+        font-size: 1rem;
+        letter-spacing: 5px;
+        color: var(--text-gold);
+        margin-top: 20px;
+      }
+
+      /* --- LAYOUT CONTAINERS --- */
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 80px 20px;
+      }
+
+      .section-title {
+        font-family: "Cinzel", serif;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 50px;
+        color: var(--text-dark);
+        letter-spacing: 3px;
+      }
+
+      .section-title::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 2px;
+        background: var(--text-gold);
+        margin: 15px auto 0;
+      }
+
+      /* --- THE GREETING --- */
+      .greeting-box {
+        background: var(--card-bg);
+        border: 1px solid var(--glass-border);
+        padding: 50px;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .greeting-box p {
+        font-size: 1.2rem;
+        line-height: 2;
+        color: #555;
+        font-style: italic;
+      }
+
+      /* --- LUXURY MOMENTS ALBUM --- */
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .frame {
+        position: relative;
+        overflow: hidden;
+        background: #fff;
+        padding: 10px;
+        border: 1px solid var(--glass-border);
+        border-radius: 5px;
+        box-shadow: var(--shadow-soft);
+        cursor: pointer;
+        aspect-ratio: 4/5;
+        transition: transform 0.4s ease;
+      }
+
+      .frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s ease;
+      }
+
+      .frame:hover {
+        transform: translateY(-10px);
+      }
+
+      .frame:hover img {
+        transform: scale(1.05);
+      }
+
+      /* --- ADDITIONAL IMPORTANT THINGS (Details & Timeline) --- */
+      .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 60px;
+      }
+
+      .info-card {
+        background: var(--card-bg);
+        border-top: 4px solid var(--accent-blush);
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .info-card h3 {
+        font-family: "Cinzel", serif;
+        color: var(--text-dark);
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+      }
+
+      .info-card ul {
+        list-style: none;
+        color: #666;
+      }
+
+      .info-card ul li {
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      /* --- GIFT & RSVP SECTION --- */
+      .action-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .luxury-card {
+        background: #fff;
+        border: 1px solid var(--glass-border);
+        padding: 40px;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .luxury-card h3 {
+        font-family: "Cinzel", serif;
+        color: var(--text-gold);
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+      }
+
+      .account-box {
+        background: var(--bg-main);
+        padding: 15px;
+        border: 1px solid rgba(197, 160, 89, 0.4);
+        border-radius: 5px;
+        margin: 15px 0;
+        font-family: monospace;
+        font-size: 1.3rem;
+        color: var(--text-dark);
+        letter-spacing: 2px;
+        user-select: all;
+      }
+
+      /* Form input styling */
+      input,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        background: var(--bg-main);
+        border: 1px solid #ddd;
+        color: var(--text-dark);
+        font-family: "Montserrat", sans-serif;
+        border-radius: 3px;
+      }
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: var(--text-gold);
+        box-shadow: 0 0 8px rgba(184, 144, 71, 0.2);
+      }
+
+      /* --- FLOATING MUSIC BUTTON --- */
+      .music-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #fff;
+        border: 1px solid var(--text-gold);
+        color: var(--text-gold);
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 1000;
+        box-shadow: var(--shadow-soft);
+        transition: all 0.3s ease;
+      }
+      .music-btn:hover {
+        background: var(--gold-gradient);
+        color: #fff;
+        border-color: transparent;
+        transform: scale(1.1);
+      }
+
+      /* --- FOOTER --- */
+      footer {
+        text-align: center;
+        padding: 40px;
+        background: #fff;
+        border-top: 1px solid var(--glass-border);
+        margin-top: 50px;
+      }
+      .brand {
+        font-size: 0.8rem;
+        color: #888;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.8rem;
+        }
+        .hero-content {
+          padding: 40px 20px;
+          margin: 20px;
+        }
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <audio id="bgMusic" loop>
+      <source src="your-music.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div id="curtain">
+      <button class="gold-btn" onclick="startExperience()">
+        Open Invitation
+      </button>
+    </div>
+
+    <button class="music-btn" id="musicToggle" onclick="toggleMusic()">
+      ♪
+    </button>
+
+    <header>
+      <div class="hero-content">
+        <div class="subtitle-script fade-in-section">
+          Celebrating the life of
+        </div>
+        <h1 class="fade-in-section">ALDI</h1>
+        <p
+          class="fade-in-section"
+          style="
+            letter-spacing: 4px;
+            color: #777;
+            text-transform: uppercase;
+            font-weight: 500;
+          ">
+          A Day to Remember
+        </p>
+        <div class="blessing-mark fade-in-section">✦ 444 ✦</div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="fade-in-section">
+        <h2 class="section-title">The Prologue</h2>
+        <div class="greeting-box">
+          <p>
+            "Here’s to the journey so far, the late nights, the hard work, and
+            the beautiful moments in between. May this new chapter bring
+            unprecedented success, unwavering health, and a life surrounded by
+            those who matter most. The best is yet to come."
+          </p>
+        </div>
+      </div>
+
+      <br /><br /><br />
+
+      <div class="info-grid fade-in-section">
+        <div class="info-card">
+          <h3>Event Details</h3>
+          <ul>
+            <li><strong>Date:</strong> Saturday, The Celebration Day</li>
+            <li><strong>Time:</strong> 11:00 AM Onwards</li>
+            <li><strong>Dress Code:</strong> Bright / Floral / Pastel</li>
+            <li><strong>Location:</strong> The Garden Villa, City Center</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>This Year's Goals</h3>
+          <ul>
+            <li>✓ Leveling up technical mastery</li>
+            <li>✓ Creating lasting digital solutions</li>
+            <li>✓ Building stronger connections</li>
+            <li>✓ Finding balance in the chaos</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fade-in-section">
+        <h2 class="section-title">Captured Elegance</h2>
+        <div class="gallery-grid">
+          <div class="frame">
+            <img
+              src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=600&q=80"
+              alt="Moment 1" />
+          </div>
+          <div class="frame">
+            <img
+              src="https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=600&q=80"
+              alt="Moment 2" />
+          </div>
+          <div class="frame">
+            <img
+              src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=600&q=80"
+              alt="Moment 3" />
+          </div>
+        </div>
+      </div>
+
+      <br /><br /><br />
+
+      <div class="fade-in-section">
+        <h2 class="section-title">Tokens of Appreciation</h2>
+        <div class="action-section">
+          <div class="luxury-card">
+            <h3>Digital Blessings</h3>
+            <p style="color: #777; font-size: 0.9rem; margin-bottom: 20px">
+              For those who wish to send a gift digitally.
+            </p>
+
+            <div style="text-align: left; margin-top: 15px">
+              <span
+                style="
+                  color: var(--accent-blush);
+                  font-size: 0.9rem;
+                  font-weight: bold;
+                "
+                >BANK BCA</span
+              >
+              <div class="account-box">1234 5678 90</div>
+              <span style="color: #888; font-size: 0.8rem"
+                >a.n. ALDI ALFIANDI</span
+              >
+            </div>
+
+            <div style="text-align: left; margin-top: 25px">
+              <span
+                style="
+                  color: var(--accent-blush);
+                  font-size: 0.9rem;
+                  font-weight: bold;
+                "
+                >DELIVERY ADDRESS</span
+              >
+              <div
+                class="account-box"
+                style="font-size: 0.9rem; font-family: &quot;Montserrat&quot;">
+                Jl. Example Street No. 123<br />Your City, Province 12345
+              </div>
+            </div>
+          </div>
+
+          <div class="luxury-card">
+            <h3>Leave a Message</h3>
+            <p style="color: #777; font-size: 0.9rem; margin-bottom: 20px">
+              Sign the digital guestbook.
+            </p>
+            <form
+              onsubmit="
+                event.preventDefault();
+                alert('Message sent successfully!');
+              ">
+              <input type="text" placeholder="Your Name" required />
+              <textarea
+                rows="4"
+                placeholder="Your wishes..."
+                required></textarea>
+              <button
+                type="submit"
+                class="gold-btn"
+                style="width: 100%; font-size: 1rem; padding: 10px">
+                Send Wish
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p class="brand">DESIGNED FOR A SPECIAL DAY</p>
+      <p
+        class="brand"
+        style="font-size: 0.65rem; margin-top: 10px; opacity: 0.7">
+        POWERED BY LEVIOCODE DIGITAL SOLUTIONS
+      </p>
+    </footer>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+      const musicBtn = document.getElementById("musicToggle");
+      let isPlaying = false;
+
+      // Start Experience
+      function startExperience() {
+        const curtain = document.getElementById("curtain");
+        curtain.style.opacity = "0";
+
+        setTimeout(() => {
+          curtain.style.visibility = "hidden";
+          musicBtn.style.display = "flex";
+          toggleMusic(); // Start the music
+        }, 1500);
+      }
+
+      // Play/Pause Music
+      function toggleMusic() {
+        if (isPlaying) {
+          audio.pause();
+          musicBtn.innerHTML = "🔇";
+          musicBtn.style.background = "#fff";
+          musicBtn.style.color = "var(--text-gold)";
+        } else {
+          audio.play().catch((e) => console.log("Audio blocked"));
+          musicBtn.innerHTML = "♪";
+          musicBtn.style.background = "var(--gold-gradient)";
+          musicBtn.style.color = "#fff";
+          musicBtn.style.border = "none";
+        }
+        isPlaying = !isPlaying;
+      }
+
+      // Intersection Observer for Scroll Fade-Ins
+      document.addEventListener("DOMContentLoaded", () => {
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.15,
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        const sections = document.querySelectorAll(".fade-in-section");
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+      });
+    </script>
+  </body>
+</html>

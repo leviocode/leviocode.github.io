@@ -1,0 +1,24 @@
+<input type="text" value="" id="noti" /><button onclick="notify()">Click</button>
+<script>
+  
+  let noti = document.getElementById("noti")
+  
+  let notify = () => {
+    
+    Notification.requestPermission().then((res) => {
+      if (res === 'granted') {
+        popUpNotif()
+      } else {
+        alert("failed")
+      }
+    })
+    
+  }
+  
+  let popUpNotif = () => {
+    let notif = new Notification('Alert', {
+      body: noti.value || "Test"
+    })
+  }
+  
+</script>
