@@ -1,0 +1,429 @@
+<!doctype html>
+<!--
+  Neon Afterglow design reminder:
+  A cinematic, intimate love letter told with dark space, controlled magenta light,
+  analog-film textures, and a continuous vertical story rather than generic sections.
+-->
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#07030f" />
+    <meta
+      name="description"
+      content="Surat cinta sinematik yang dibuat khusus untuk Yona." />
+    <title>Untuk Yona — Pemilik Hatiku</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="icon"
+      href="/manus-storage/yona-double-heart-logo_12b2cd93.png"
+      type="image/png" />
+    <link
+      rel="preload"
+      as="image"
+      href="/manus-storage/yona-hero-afterglow_5a71e783.jpg" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Meta tag tambahan untuk PWA / sharing -->
+    <meta property="og:title" content="Untuk Yona — Sebuah Kisah Cinta" />
+    <meta
+      property="og:description"
+      content="Surat cinta sinematik untuk Yona." />
+    <meta property="og:type" content="website" />
+  </head>
+
+  <body>
+    <div class="film-grain" aria-hidden="true"></div>
+    <div class="page-glow page-glow--one" aria-hidden="true"></div>
+    <div class="page-glow page-glow--two" aria-hidden="true"></div>
+
+    <!-- ===== LAYAR PEMBUKA ===== -->
+    <div
+      class="opening"
+      id="opening"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="opening-title">
+      <div class="opening__aurora" aria-hidden="true"></div>
+      <div class="opening__content">
+        <img
+          class="opening__mark"
+          src="/manus-storage/yona-double-heart-logo_12b2cd93.png"
+          alt="Logo Hati Yona"
+          onerror="
+            this.style.display = 'none';
+            this.nextElementSibling?.classList.add('show-fallback');
+          " />
+        <p class="eyebrow">SEBUAH UNGKAPAN TULUS UNTUK</p>
+        <h1 id="opening-title">Yona</h1>
+        <p class="opening__line">
+          Karena beberapa orang membuat hidup bersinar dengan cara yang berbeda.
+        </p>
+        <button class="button button--light" id="enterSite" type="button">
+          <span>Buka Surat Cinta</span>
+          <span class="button__arrow" aria-hidden="true">↘</span>
+        </button>
+      </div>
+      <p class="opening__footnote">
+        Tetaplah tinggal walau situasi nampak tak mudah.
+      </p>
+    </div>
+
+    <!-- ===== SITUS UTAMA ===== -->
+    <main id="site" class="site" aria-hidden="true">
+      <!-- HEADER -->
+      <header class="site-header" id="siteHeader">
+        <a href="#top" class="brand" aria-label="Kembali ke awal">
+          <img
+            src="/manus-storage/yona-double-heart-logo_12b2cd93.png"
+            alt="Logo Yona"
+            onerror="
+              this.style.display = 'none';
+              this.parentElement
+                .querySelector('.brand-fallback')
+                ?.classList.add('show-fallback');
+            " />
+          <span class="brand-fallback" aria-hidden="true">💜</span>
+          <span>YONA</span>
+        </a>
+        <nav class="nav" aria-label="Bagian surat cinta">
+          <a href="#why">Kenapa kamu</a>
+          <a href="#moments">Momen</a>
+          <a href="#letter">Surat</a>
+        </nav>
+        <button
+          class="sound-toggle"
+          id="soundToggle"
+          type="button"
+          aria-pressed="false"
+          aria-label="Nyalakan musik ambien">
+          <span class="sound-toggle__bars" aria-hidden="true"
+            ><i></i><i></i><i></i><i></i
+          ></span>
+          <span id="soundText">Nyalakan Suara</span>
+        </button>
+      </header>
+
+      <!-- RAIL PROGRES -->
+      <aside class="scene-rail" aria-label="Progres cerita">
+        <span class="scene-rail__line"><i id="railFill"></i></span>
+        <a href="#top" aria-label="Adegan pembuka"></a>
+        <a href="#why" aria-label="Kenapa Yona"></a>
+        <a href="#moments" aria-label="Momen-momen"></a>
+        <a href="#letter" aria-label="Surat cinta"></a>
+      </aside>
+
+      <!-- ===== HERO ===== -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div
+          class="hero__image"
+          role="img"
+          aria-label="Jendela tengah malam yang diterangi cahaya merah muda dan ungu"
+          style="
+            background-image: url(&quot;/manus-storage/yona-hero-afterglow_5a71e783.jpg&quot;);
+            background-size: cover;
+            background-position: center;
+          "></div>
+        <div class="hero__shade" aria-hidden="true"></div>
+        <div class="starfield" id="starfield" aria-hidden="true"></div>
+        <div class="hero__content reveal">
+          <p class="eyebrow"><span></span> INI KHUSUS UNTUKMU</p>
+          <h2 id="hero-title">
+            Di dunia yang<br />penuh ketidakpastian,<br /><em
+              >Yona adalah harapan.</em
+            >
+          </h2>
+          <p class="hero__copy">
+            Yona, kamu begitu manis — dan aku sangat bersyukur bisa mengenalmu.
+            Kamu pulihkan lukaku.
+          </p>
+          <div class="hero__actions">
+            <a href="#letter" class="button button--primary"
+              >Baca surat kecil ini
+              <span class="button__arrow" aria-hidden="true">↘</span></a
+            >
+          </div>
+        </div>
+        <div class="hero__meta" aria-hidden="true">
+          <span>DIRANGKAI DENGAN CINTA</span>
+          <span>01 — ∞</span>
+        </div>
+        <a
+          class="scroll-cue"
+          href="#why"
+          aria-label="Gulir ke adegan berikutnya"
+          ><span></span> GULIR UNTUK MERASAKANNYA</a
+        >
+      </section>
+
+      <!-- ===== WHY ===== -->
+      <section class="why section" id="why" aria-labelledby="why-title">
+        <div class="section-index reveal" aria-hidden="true">02</div>
+        <div class="why__heading reveal">
+          <p class="eyebrow"><span></span> LEBIH DEKAT</p>
+          <h2 id="why-title">Alasan aku terus<br /><em>memilihmu.</em></h2>
+        </div>
+        <div class="why__layout">
+          <figure class="flower-frame reveal reveal--left">
+            <img
+              src="1.jpeg"
+              alt="Bunga peony merah muda bersinar dalam cahaya ungu pekat"
+              onerror="
+                this.style.display = 'none';
+                this.parentElement.classList.add('flower-frame--fallback');
+              " />
+            <div class="flower-frame__fallback" aria-hidden="true">🌹</div>
+            <figcaption>
+              Bingkai 02 · hati yang lembut, jiwa yang terang
+            </figcaption>
+          </figure>
+          <div class="reasons reveal reveal--right">
+            <article class="reason">
+              <span class="reason__number">01</span>
+              <div>
+                <h3>Kemanisanmu</h3>
+                <p>
+                  Sesuatu yang mengubah momen kecil menjadi sesuatu yang selalu
+                  kuingat.
+                </p>
+              </div>
+            </article>
+            <article class="reason">
+              <span class="reason__number">02</span>
+              <div>
+                <h3>Kilauan kecilmu</h3>
+                <p>
+                  Kamu membuat hal biasa terasa lebih bermakna, lebih cerah, dan
+                  sangat layak untuk diperjuangkan.
+                </p>
+              </div>
+            </article>
+            <article class="reason">
+              <span class="reason__number">03</span>
+              <div>
+                <h3>Kita, apa adanya</h3>
+                <p>
+                  Bukan cerita yang sempurna — hanya kisah nyata yang aku
+                  syukuri bisa kujalani bersamamu.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MOMENTS ===== -->
+      <section
+        class="moments section"
+        id="moments"
+        aria-labelledby="moments-title">
+        <div class="moments__backdrop" aria-hidden="true"></div>
+        <div
+          class="section-index section-index--right reveal"
+          aria-hidden="true">
+          03
+        </div>
+        <div class="moments__intro reveal">
+          <p class="eyebrow"><span></span> PUTAR FILM</p>
+          <h2 id="moments-title">
+            Cantik wajahmu<br /><em>yang selalu kuingat.</em>
+          </h2>
+          <p>
+            Setiap tawa, setiap jeda hening, setiap kali aku melihatmu menjadi
+            dirimu sendiri. Di sinilah foto-fotomu berada.
+          </p>
+        </div>
+
+        <!-- CAROUSEL -->
+        <div class="carousel-wrapper reveal" id="carouselWrapper">
+          <button
+            class="carousel-button prev-button"
+            id="carouselPrev"
+            aria-label="Sebelumnya">
+            ❮
+          </button>
+
+          <div
+            class="memory-strip"
+            id="carouselTrack"
+            aria-label="Tiga slot memori untuk foto pribadimu">
+            <!-- Card 1 -->
+            <figure class="memory-card memory-card--one">
+              <div
+                class="memory-card__image memory-card__image--placeholder"
+                style="
+                  background-image: url(&quot;2.jpeg&quot;);
+                  background-size: cover;
+                  background-position: center;
+                ">
+                <span style="display: none">Letakkan fotomu di sini</span>
+                <div class="memory-card__overlay-heart" aria-hidden="true">
+                  ♥
+                </div>
+              </div>
+              <figcaption>
+                <span>MEMORI 01</span><b>Senyum yang menghentikan waktu.</b>
+              </figcaption>
+            </figure>
+            <!-- Card 2 -->
+            <figure class="memory-card memory-card--two">
+              <div
+                class="memory-card__image memory-card__image--film"
+                style="
+                  background-image: url(&quot;3.jpeg&quot;);
+                  background-size: cover;
+                  background-position: center;
+                ">
+                <div class="memory-card__film-overlay" aria-hidden="true"></div>
+              </div>
+              <figcaption>
+                <span>MEMORI 02</span><b>Tatapan yang membuatku terpaku.</b>
+              </figcaption>
+            </figure>
+            <!-- Card 3 -->
+            <figure class="memory-card memory-card--three">
+              <div
+                class="memory-card__image memory-card__image--placeholder"
+                style="
+                  background-image: url(&quot;4.jpeg&quot;);
+                  background-size: cover;
+                  background-position: center;
+                ">
+                <span style="display: none">Letakkan fotomu di sini</span>
+                <div class="memory-card__overlay-heart" aria-hidden="true">
+                  ♥
+                </div>
+              </div>
+              <figcaption>
+                <span>MEMORI 03</span
+                ><b>Wajah yang meyakinkanku bahwa kamulah jodohku.</b>
+              </figcaption>
+            </figure>
+          </div>
+
+          <button
+            class="carousel-button next-button"
+            id="carouselNext"
+            aria-label="Selanjutnya">
+            ❯
+          </button>
+        </div>
+      </section>
+
+      <!-- ===== REEL ===== -->
+      <section class="reel section" aria-labelledby="reel-title">
+        <div class="reel__frame reveal">
+          <div class="reel__holes reel__holes--top" aria-hidden="true"></div>
+          <div
+            class="reel__screen"
+            id="videoStage"
+            role="img"
+            aria-label="Malam berbintang ungu di atas danau yang tenang"
+            style="
+              background-image: url(&quot;1.mp4&quot;);
+              background-size: cover;
+              background-position: center;
+            ">
+            <video
+              id="realVideo"
+              playsinline
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                inset: 0;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                z-index: 0;
+              ">
+              <source src="1.mp4" type="video/mp4" />
+            </video>
+
+            <div
+              class="reel__shade"
+              aria-hidden="true"
+              style="z-index: 1"></div>
+            <button
+              class="reel__play"
+              type="button"
+              id="videoButton"
+              aria-label="Putar video pribadimu"
+              style="z-index: 2">
+              <span>▶</span>
+            </button>
+          </div>
+          <div class="reel__holes reel__holes--bottom" aria-hidden="true"></div>
+        </div>
+        <div class="reel__copy reveal">
+          <p class="eyebrow"><span></span> KILASAN</p>
+          <h2 id="reel-title">Jika aku bisa<br />menjeda waktu,</h2>
+          <p>
+            itu adalah momen bersamamu. Bukan karena dunia berhenti, tapi karena
+            semuanya terasa lebih tenang saat kamu ada di dekatku.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== LETTER ===== -->
+      <section
+        class="letter section"
+        id="letter"
+        aria-labelledby="letter-title">
+        <div class="letter__orb letter__orb--one" aria-hidden="true"></div>
+        <div class="letter__orb letter__orb--two" aria-hidden="true"></div>
+        <div class="letter__content reveal">
+          <p class="eyebrow"><span></span> SEBUAH UNGKAPAN TULUS UNTUK</p>
+          <h2 id="letter-title"><em>Yona,</em></h2>
+          <div class="letter__body">
+            <p>
+              Halaman kecil ini sengaja aku buat khusus buat kamu. Makasih ya
+              udah selalu jadi dirimu sendiri. Kehadiranmu bener-bener bawa
+              banyak hal baik yang selalu aku syukuri setiap harinya.
+            </p>
+            <p>
+              Apapun yang terjadi ke depannya, aku cuma mau kamu tahu: tetap
+              selalu bersamamu adalah salah satu hal terbaik di hidupku.
+            </p>
+          </div>
+          <p class="signature">
+            Dari Aldi,<br /><span>yang beruntung punya kamu.</span>
+          </p>
+          <button class="love-button" id="sendLove" type="button">
+            <span aria-hidden="true">♡</span> Kirimkan sedikit cinta
+          </button>
+        </div>
+        <footer class="footer">
+          <img
+            src="/manus-storage/yona-double-heart-logo_12b2cd93.png"
+            alt="Logo Yona"
+            onerror="
+              this.style.display = 'none';
+              this.parentElement
+                .querySelector('.footer-fallback')
+                ?.classList.add('show-fallback');
+            " />
+          <span class="footer-fallback" aria-hidden="true">💜</span>
+          <p>Dibuat dengan sepenuh hati, untuk Yona.</p>
+          <a href="#top">Kembali ke awal ↑</a>
+        </footer>
+      </section>
+    </main>
+
+    <!-- ===== ELEMEN BURST LOVE ===== -->
+    <div class="love-burst" id="loveBurst" aria-hidden="true"></div>
+
+    <!-- ===== ELEMEN AUDIO MP3 ===== -->
+    <audio id="ambientAudio" loop preload="none">
+      <source src="/manus-storage/ambient-love.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
